@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+/* navbar and slidebar Styling */
+#sidebar {
+  position: fixed;
+  width: 20%;
+  height: 100%;
+  background-color: #151719;
+  left: -200px;
+  transition: all 500ms linear;
+  /* overflow-x: scroll; */
+}
+#sidebar.active {
+  left: 0px;
+}
+#sidebar ul li {
+  color: gray;
+  padding: 7px 10px;
+  list-style: none;
+  border-bottom: 2px solid rgba(100, 100, 100, 0.3);
+  font-size: 18px;
+  cursor: pointer;
+}
+toggle-btn {
+  position: absolute;
+  left: 230px;
+  top: 20px;
+}
+.toggle-btn span {
+  display: block;
+  width: 30px;
+  height: 5px;
+  background-color: gray;
+  margin: 5px 0px;
+}
+/* Navbar Styling end */
+
+/* VideoArea styling */
+.ifrm {
+  width: 100%;
+  padding: 20px;
+  text-align: center !important;
+  display: inline-block !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ProgressBar Styling */
+.prgrs {
+  width: 100%;
+  display: inline-block;
+  text-align: center !important;
+  margin-top: -20px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.buttonDiv {
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  text-align: right !important;
+  border-radius: 10px;
+  margin-top: -50px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button {
+  background-color: rgb(49, 177, 33);
+  margin: 0px 20px;
+  width: 100px;
+  height: 30px;
   color: white;
+  border-radius: 10px;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 700px) {
+  iframe {
+    width: auto;
+    text-align: center !important;
   }
-  to {
-    transform: rotate(360deg);
+  #sidebar {
+    width: auto;
   }
 }
