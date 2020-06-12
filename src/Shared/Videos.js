@@ -2,28 +2,31 @@ export const VIDEOS = [
   {
     id: 0,
     name: "Beautiful Night",
-    src: "Assets/Videos/vid1.mp4",
+    src: "https://www.youtube.com/embed/YX5QYITLEBI",
     click: function () {
       const ID = document.getElementById("iframeID");
-      ID.src = "Assets/Videos/vid1.mp4";
+      ID.src = "https://www.youtube.com/embed/YX5QYITLEBI";
+    },
+    click2: function incP() {
+      this.setState({ seen: true });
     },
   },
   {
     id: 1,
     name: "ThunderStrom",
-    src: "Assets/Videos/vid2.mp4",
+    src: "https://www.youtube.com/embed/0jkfnIBJRBQ",
     click: function () {
       const ID = document.getElementById("iframeID");
-      ID.src = "Assets/Videos/vid2.mp4";
+      ID.src = "https://www.youtube.com/embed/0jkfnIBJRBQ";
     },
   },
   {
     id: 2,
     name: "Sea Side ",
-    src: "Assets/Videos/vid4.mp4",
+    src: "https://www.youtube.com/embed/WxfmULzzKoU",
     click: function () {
       const ID = document.getElementById("iframeID");
-      ID.src = "Assets/Videos/vid4.mp4";
+      ID.src = "https://www.youtube.com/embed/WxfmULzzKoU";
     },
   },
   {

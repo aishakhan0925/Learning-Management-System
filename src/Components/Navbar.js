@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Navbar, NavbarBrand } from "reactstrap";
 import { VIDEOS } from "../Shared/Videos";
+import Progress from "./ProgressBar";
+
 import "../App.css";
 
 class Navigation extends Component {
@@ -11,6 +13,13 @@ class Navigation extends Component {
       seen: false,
     };
   }
+  stateChanger = (props) => {
+    this.setState({
+      seen: true,
+    });
+    // console.log(this.state.seen);
+  };
+
   render() {
     //sideBar Toggle Function
     function toggleSidebar() {
@@ -38,9 +47,12 @@ class Navigation extends Component {
               <span></span>
               <span></span>
             </div>
-            <div id="sidebar">{list}</div>
+            <div id="sidebar">
+              <h5 onClick={this.stateChanger}>{list}</h5>
+            </div>
           </NavbarBrand>
         </Navbar>
+        <Progress prp={this.state.seen} />
       </div>
     );
   }

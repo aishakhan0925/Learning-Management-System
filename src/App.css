@@ -46,13 +46,12 @@ toggle-btn {
   text-align: center !important;
   display: inline-block !important;
 }
-
 /* ProgressBar Styling */
 .prgrs {
   width: 100%;
   display: inline-block;
   text-align: center !important;
-  margin-top: -20px;
+  /* margin-top: -20px; */
 }
 .buttonDiv {
   width: 100%;
@@ -60,7 +59,7 @@ toggle-btn {
   display: inline-block;
   text-align: right !important;
   border-radius: 10px;
-  margin-top: -50px;
+  /* margin-top: -30px; */
 }
 button {
   background-color: rgb(49, 177, 33);
