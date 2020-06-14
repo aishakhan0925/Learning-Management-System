@@ -67,6 +67,7 @@ button {
   width: 100px;
   height: 30px;
   color: white;
+  outline: none;
   border-radius: 10px;
   border: none;
 }

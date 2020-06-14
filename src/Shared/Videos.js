@@ -7,9 +7,6 @@ export const VIDEOS = [
       const ID = document.getElementById("iframeID");
       ID.src = "https://www.youtube.com/embed/YX5QYITLEBI";
     },
-    click2: function incP() {
-      this.setState({ seen: true });
-    },
   },
   {
     id: 1,

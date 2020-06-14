@@ -3,7 +3,7 @@ import React from "react";
 function Button() {
   return (
     <div className="buttonDiv">
-      <button disabled className="">
+      <button>
         Next <i class="fas fa-arrow-circle-right"></i>
       </button>
     </div>

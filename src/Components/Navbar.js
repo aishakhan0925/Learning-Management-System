@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import { Navbar, NavbarBrand } from "reactstrap";
+import { Navbar, NavbarBrand, Progress } from "reactstrap";
 import { VIDEOS } from "../Shared/Videos";
-import Progress from "./ProgressBar";
-
 import "../App.css";
 
 class Navigation extends Component {
@@ -10,14 +8,13 @@ class Navigation extends Component {
     super(props);
     this.state = {
       videos: VIDEOS,
-      seen: false,
+      prg: 10,
     };
   }
-  stateChanger = (props) => {
+  changeFunc = () => {
     this.setState({
-      seen: true,
+      prg: (this.state.prg += 10),
     });
-    // console.log(this.state.seen);
   };
 
   render() {
@@ -38,6 +35,7 @@ class Navigation extends Component {
         </div>
       );
     });
+
     return (
       <div>
         <Navbar dark style={{ backgroundColor: "#151719" }}>
@@ -48,13 +46,22 @@ class Navigation extends Component {
               <span></span>
             </div>
             <div id="sidebar">
-              <h5 onClick={this.stateChanger}>{list}</h5>
+              <h5 onClick={this.changeFunc}>{list}</h5>
             </div>
           </NavbarBrand>
         </Navbar>
-        <Progress prp={this.state.seen} />
+        <div className="prgrs">
+          <progress
+            id="health"
+            max="100"
+            value={this.state.prg}
+            style={{ width: "60%", height: "40px" }}
+          ></progress>
+          <br />
+        </div>
       </div>
     );
   }
 }
+
 export default Navigation;
